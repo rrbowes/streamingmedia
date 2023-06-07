@@ -1,5 +1,14 @@
+html {
+    background-color: #020659;
+}
+
+
 body {
-    background-color:#020659;
+    background-color: linear-gradient #030A8C to #000000;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h3 {
+    color:#590242;
+
+}
