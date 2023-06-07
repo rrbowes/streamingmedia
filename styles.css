@@ -22,8 +22,14 @@ nav a:hover {
     background-color: #590242;
 }
 
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 #smoothJazz {
     background-color: linear-gradient(#030A8C to #000000);
+
 }
 
 h3 {
