@@ -3,9 +3,23 @@ html {
 }
 
 body {
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        color: #FFFFFF;
-        min-width: 375px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFFFF;
+    min-width: 375px;
+}
+
+nav li {
+    list-style:none;
+}
+
+nav a {
+    background-color: #020873;
+    text-align: center;
+    text-transform:uppercase;
+}
+
+nav a:hover {
+    background-color: #590242;
 }
 
 #smoothJazz {
@@ -14,5 +28,5 @@ body {
 
 h3 {
     color:#590242;
-
+    text-transform:uppercase;
 }
