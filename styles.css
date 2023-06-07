@@ -2,10 +2,12 @@ html {
     background-color: #020659;
 }
 
-
 body {
-    background-color: linear-gradient #030A8C to #000000;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#smoothJazz {
+    background-color: linear-gradient(#030A8C to #000000);
 }
 
 h3 {
