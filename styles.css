@@ -2,15 +2,39 @@ html {
     background-color: #020659;
 }
 
+header {
+    background: linear-gradient(to left, #000000, #030A8C);
+    padding-left: 20px;
+}
+
+main {
+    background-color: #FFFFFF;
+}
+
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFFFF;
-    min-width: 375px;
+    width: 375px;
     margin: 0 auto;
+    display: grid;
+}
+
+nav {
+    grid-row: 1/2;
+    width: 375px;
 }
 
 nav li {
     list-style:none;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+}
+
+input {
+    display: none;
 }
 
 nav a {
@@ -19,23 +43,181 @@ nav a {
     text-transform:uppercase;
     margin: 10px;
     padding: 10px;
+    width: 375px;
 }
 
 nav a:hover {
     background-color: #590242;
 }
 
-ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+aside {
+    background-color: #590242;
+    color:#FFFFFF;
+    padding: 10px;
+    width: 140px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 10px;
 }
 
-#smoothJazz {
-    background-color: linear-gradient(#030A8C to #000000);
+.scroll {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 375px;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    background-color: #FFFFFF;
+    text-align: left;
+}
 
+.scroll div {
+    position:absolute;
+    top: 250px;
+    background-color: rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 300px;
+}
+
+audio {
+    position: relative;
+    bottom: 160px;
+    left: 5px;
+
+}
+
+#trendingSongs section {
+    margin: 5px;
+    position:relative;
+}
+
+#trendingSongs h3 {
+    color:#590242;
+    font-size: 1em;
+}
+
+#yourPlaylists {
+    background-color: #2699FB;
+}
+
+#yourPlaylists section {
+    margin: 15px;
+    padding: 15px;
+    background-color: #0D8DFB;
+}
+
+.yourScroll {
+    display: grid;
+    width: 375px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    text-align: center;
+    column-gap: 5px;
+}
+
+#curatedPlaylists {
+    background-color: #030A8C;
+}
+
+#curatedPlaylists section {
+    margin: 15px;
+    padding: 15px;
+    background-color: #020873;
+}
+
+.curatedScroll {
+    display: grid;
+    width: 375px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    text-align: center;
+    column-gap: 5px; 
+}
+
+h2 {
+    background-color: #FFFFFF;
+    color:#590242;
+    text-transform:uppercase;
+    padding-left: 20px;
+    font-size: 1em;
+    padding-bottom: 10px;
 }
 
 h3 {
+    color:#FFFFFF;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+dl {
+    display: flex;
+}
+
+dt {
     color:#590242;
-    text-transform:uppercase;
+    font-style: italic;
+    font-size: 1em;
+}
+
+dd {
+    color:#590242;
+    font-size: 1em;
+}
+
+footer {
+    background-color: #FFFFFF;
+    color:#590242;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+#trendingSongs ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#trendingSongs ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+
+#trendingSongs ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+
+#trendingSongs ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+
+#yourPlaylists ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#yourPlaylists ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+
+#yourPlaylists ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+
+#yourPlaylists ::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF;
+}
+
+#curatedPlaylists ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#curatedPlaylists ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+
+#curatedPlaylists ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+
+#curatedPlaylists ::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF;
 }
