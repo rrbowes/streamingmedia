@@ -1,14 +1,17 @@
 html {
     background-color: #020659;
+    
 }
 
 header {
     background: linear-gradient(to left, #000000, #030A8C);
     padding-left: 20px;
+    width: 355px;
 }
 
 main {
     background-color: #FFFFFF;
+    width: 375px;
 }
 
 body {
@@ -21,7 +24,7 @@ body {
 
 nav {
     grid-row: 1/2;
-    width: 375px;
+    
 }
 
 nav li {
@@ -30,7 +33,10 @@ nav li {
 
 ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+    grid-template-columns: 1fr;
+    width: 375px;
+    position: relative;
+    z-index: 1;
 }
 
 input {
@@ -43,7 +49,6 @@ nav a {
     text-transform:uppercase;
     margin: 10px;
     padding: 10px;
-    width: 375px;
 }
 
 nav a:hover {
@@ -83,7 +88,6 @@ audio {
     position: relative;
     bottom: 160px;
     left: 5px;
-
 }
 
 #trendingSongs section {
@@ -220,4 +224,99 @@ footer {
 
 #curatedPlaylists ::-webkit-scrollbar-thumb:hover {
     background: #FFFFFF;
+}
+
+.menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .navicon {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+.menu-icon .navicon:before
+.menu-icon .navicon:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.menu-icon .navicon:before {
+    top: 5px;
+}
+
+.menu-icon .navicon:after {
+    top: -5px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked ~.menu {
+    max-height: 500px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media screen and (min-width: 834px) {
+
+    ul {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        width:fill;
+        position: relative;
+    }
+    main {
+        margin-left: 200px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #trendingSongs {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    #yourPlaylists {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #curatedPlaylists {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+
+
 }
